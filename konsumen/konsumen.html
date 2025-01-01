@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Kami</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .bg-custom{
+            background-color: #00765a;;
+        }
+        h2{
+            color: #00765a;
+        }
+        .kartu-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .room-card {
+            flex: 0 0 auto; 
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .room-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .room-card .card-body {
+            padding: 15px;
+        }
+        .text-muted{
+            padding-bottom: 2px;
+        }
+        footer{
+            background-color: #00765a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-custom text-white text-center py-3">
+        <h1>Selamat Datang di Hotel Kami</h1>
+        <p>Jelajahi Jenis Kamar dan Fasilitas Kami</p>
+    </header>
+
+    <main class="container py-5">
+        <h2 class="text-center mb-4">Jenis Kamar</h2>
+        <div class="kartu-container">
+            <!-- Kamar Standart -->
+            <div class="room-card">
+                <img src="../hotel/hotel1.jpg" alt="Kamar Standart">
+                <div class="card-body">
+                    <h5 class="card-title">Kamar Standart</h5>
+                    <p class="card-text">Kamar dengan fasilitas sederhana.</p>
+                    <ul>
+                        <li>Kasur Single </li>
+                        <li>TV saluran terbatas</li>
+                        <li>Wi-Fi gratis</li>
+                        <li>Meja kerja sederhana</li>
+                        <li>kipas angin</li>
+                    </ul>
+                    <hr>
+                    <p class="text-muted">Rp 150.000</p>
+                </div>
+            </div>
+            <!-- Kamar Deluxe -->
+            <div class="room-card">
+                <img src="../hotel/hotel11.jpg" alt="Kamar Deluxe">
+                <div class="card-body">
+                    <h5 class="card-title">Kamar Deluxe</h5>
+                    <p class="card-text">Kamar luas dengan fasilitas premium.</p>
+                    <ul>
+                        <li>Kasur besar</li>
+                        <li>TV Android</li>
+                        <li>dilengkapi AC</li>
+                        <li>ruangan lebih luas</li>
+                        <li>bathub shower</li>
+                    </ul>
+                    <hr>
+                    <p class="text-muted">Rp 250.000</p>
+                </div>
+            </div>
+            <!-- Kamar Family -->
+            <div class="room-card">
+                <img src="../hotel/hotel111.jpg" alt="Kamar Family">
+                <div class="card-body">
+                    <h5 class="card-title">Kamar Family</h5>
+                    <p class="card-text">Kamar luas yang ideal untuk keluarga.</p>
+                    <ul>
+                        <li>Kamar yang luas</li>
+                        <li>Smart TV</li>
+                        <li>wifi</li>
+                        <li>ruangan Luas</li>
+                        <li>pemijatan</li>
+                    </ul>
+                    <hr>
+                    <p class="text-muted">Rp 350.000</p>
+                </div>
+            </div>
+            <!-- Tambahkan kartu lainnya jika diperlukan -->
+        </div>
+    </main>
+<hr>
+<!--pemesanan-->
+    <div class="containerpesan">
+        <h1>Form Pemesanan</h1>
+        <div class="pesan">
+            <label for="nama_pemesan">Nama Pemesan : </label>
+            <input type="text" id="nama_pemesan" required />
+        </div>
+        <div class="pesan">
+            <label for="jk">jenis kelamin : </label>
+            <input type="radio" id="L" name="L" value="L" required />
+            <label for="L">Laki Laki</label>
+            <input type="radio" id="P" name="P" value="P" required />
+            <label for="P">Perempuan</label>
+        </div>
+        <div class="pesan">
+            <label for="no_identitas">Nomor Identitas : </label>
+            <input type="text" id="no_identitas" name="no_identitas" min="0" required />
+        </div>
+        <div class="pesan">
+            <label for="tipe_kamar">Tipe Kamar : </label>
+            <select name="std">
+                <option value="-">--pilih--</option>
+                <option value="stdrt">STANDART</option>
+                <option value="dlx">DELUXE</option>
+                <option value="fmly">FAMILY</option>
+            </select>
+        </div>  
+        <div class="pesan">
+            <label for="harga">Harga : </label>
+            <input type="number" id="harga" name="harga" required />
+        </div>
+        <div class="pesan">
+            <label for="tgl">Tanggal Pesan : </label>
+            <input type="date" id="tgl"/>
+        </div>
+        <div class="pesan">
+            <label for="durasi">Durasi Menginap : </label>
+            <div class="durasi">
+                <input type="number" id="durasi" name="durasi" min="1">Hari
+            </div>
+        </div>
+        <div class="pesan">
+            <label for="brkfst">Termasuk Breakfast : </label>
+            <input type="checkbox" id="brkfst" checked> Ya
+        </div>
+        <div class="pesan">
+            <label for="total">Total Bayar : </label>
+            <input type="text" id="total" readonly />
+        </div>
+        <div class="tombol">
+            <button class="simpan">Simpan</button>
+            <button class="batal">Batal</button>
+        </div>
+    </div>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Sindangagung regency.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hotel Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#admin">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#consumer">Konsumen</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Admin Section -->
+        <section id="admin">
+            <h2>Admin Panel</h2>
+
+            <!-- Login -->
+            <div class="card mb-4">
+                <div class="card-header">Login</div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="adminEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="adminEmail" placeholder="Enter email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="adminPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="adminPassword" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Manage Room Types -->
+            <div class="card mb-4">
+                <div class="card-header">Kelola Jenis Kamar</div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="roomType" class="form-label">Jenis Kamar</label>
+                            <input type="text" class="form-control" id="roomType" placeholder="Enter room type">
+                        </div>
+                        <button type="submit" class="btn btn-success">Add Room Type</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Manage Hotel Facilities -->
+            <div class="card mb-4">
+                <div class="card-header">Kelola Fasilitas Hotel</div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="facility" class="form-label">Fasilitas</label>
+                            <input type="text" class="form-control" id="facility" placeholder="Enter facility">
+                        </div>
+                        <button type="submit" class="btn btn-success">Add Facility</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- View Consumer Bookings -->
+            <div class="card mb-4">
+                <div class="card-header">Lihat Data Pemesanan Konsumen</div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nama Konsumen</th>
+                                <th>Tanggal Pemesanan</th>
+                                <th>Jenis Kamar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>2025-01-01</td>
+                                <td>Deluxe</td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>2025-01-02</td>
+                                <td>Superior</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consumer Section -->
+        <section id="consumer">
+            <h2>Konsumen</h2>
+
+            <!-- View Room Types -->
+            <div class="card mb-4">
+                <div class="card-header">Lihat Jenis Kamar</div>
+                <div class="card-body">
+                    <ul>
+                        <li>Deluxe</li>
+                        <li>Superior</li>
+                        <li>Standard</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- View Facilities -->
+            <div class="card mb-4">
+                <div class="card-header">Lihat Fasilitas</div>
+                <div class="card-body">
+                    <ul>
+                        <li>Kolam Renang</li>
+                        <li>Gym</li>
+                        <li>Restoran</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Book a Room -->
+            <div class="card mb-4">
+                <div class="card-header">Pemesanan Kamar Hotel</div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="consumerName" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="consumerName" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookingDate" class="form-label">Tanggal Pemesanan</label>
+                            <input type="date" class="form-control" id="bookingDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="roomTypeSelect" class="form-label">Jenis Kamar</label>
+                            <select class="form-select" id="roomTypeSelect">
+                                <option value="deluxe">Deluxe</option>
+                                <option value="superior">Superior</option>
+                                <option value="standard">Standard</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
