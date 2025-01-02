@@ -11,7 +11,61 @@ body {
 .container{
     padding: 30px 10px;
 }
+#isi{
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 7px;
+    width: 800px;
+    margin: 20px;
+}
+#isi h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.form-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group label{
+    flex: 1 1 150px;
 
+}
+.form-group input{
+    flex: 3 1 300px;
+}
+#isi1{
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 7px;
+    width: 800px;
+    margin: 20px;
+}
+#isi1 h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#isi3{
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 7px;
+    width: 800px;
+    margin: 20px;
+}
+#isi3 h3{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.jk{
+    display: block;
+    padding-right: 47%;
+    
+}
+.tombolfas{
+    margin-left: 80px;
+}
 h2{
     display: flex;
     justify-content: center;
@@ -62,14 +116,12 @@ button{
     background-color: #f8f9fa;
     padding-bottom: 50px;
 }
-
 .kartu h2 {
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
     color: #00765a;
 }
-
 .kartu .card {
     width: 300px;
     background-color: #ffffff;
@@ -78,25 +130,19 @@ button{
     overflow: hidden;
     transition: transform 0.3s ease;
 }
-
-
 .kartu .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
-
 .kartu .card-body {
     padding: 15px;
 }
-
 .kartu .card-title {
     font-weight: bold;
     color: #00765a;
     margin-bottom: 10px;
 }
-
 .kartu .fasilitas {
     font-size: 1rem;
     color: #6c757d;
