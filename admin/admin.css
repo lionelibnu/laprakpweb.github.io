@@ -4,12 +4,26 @@ body {
 .navbar-custom{
     background-color: #00765a;
 }
-.navbar a{
-    color: rgb(255, 255, 255);
+.nav-link{
+    text-decoration: none;
+    color: #ffffff;
 }
-
+nav{
+    color: #ffffff;
+}
 .container{
     padding: 30px 10px;
+}
+.form-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group label{
+    flex: 1 1 150px;
+
+}
+.form-group input{
+    flex: 3 1 300px;
 }
 #isi{
     background-color: #ddd;
@@ -22,17 +36,6 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
-}
-.form-group{
-    display: flex;
-    flex-wrap: wrap;
-}
-.form-group label{
-    flex: 1 1 150px;
-
-}
-.form-group input{
-    flex: 3 1 300px;
 }
 #isi1{
     background-color: #ddd;
@@ -54,10 +57,10 @@ body {
     margin: 20px;
 }
 #isi3 h3{
+    text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
 }
-
 .jk{
     display: block;
     padding-right: 47%;
@@ -147,4 +150,32 @@ button{
     font-size: 1rem;
     color: #6c757d;
 }
+@media (max-width: 768px){
 
+    .navbar-brand {
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px;
+      }
+  
+      .navbar-brand:hover {
+        color: #ff9900;
+      }
+  
+      .nav-link {
+        color: #fff;
+        font-size: 18px;
+      }
+  
+      .navbar-toggler {
+        border-color: #fff;
+        margin: 0;
+        margin-left: 60%;
+        margin-top: 15px;
+      }
+  
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+    
+}
